@@ -1,0 +1,41 @@
+doctype html
+html
+    head
+        title Users List
+        style.
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            h1 {
+                color: #333;
+            }
+            ul {
+                list-style-type: disc;
+                padding-left: 20px;
+            }
+            li {
+                margin-bottom: 5px;
+            }
+            a {
+                display: inline-block;
+                margin-top: 10px;
+                text-decoration: none;
+                color: #007bff;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+
+    body
+        if users.length === 0
+            h1 No users found.
+        else
+            h1 We have the following users:
+            ul
+                each user in users
+                    li #{user.name} - #{user.email}
+
+        a(href="/add") Add User
+        br
+        a(href="/users") Users Info

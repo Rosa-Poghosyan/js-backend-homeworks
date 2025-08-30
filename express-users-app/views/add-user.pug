@@ -1,0 +1,53 @@
+doctype html
+html
+    head
+        title Add User
+        style.
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            h1 {
+                color: #333;
+            }
+            form {
+                margin-top: 20px;
+                max-width: 400px;
+            }
+            label {
+                display: block;
+                margin-top: 10px;
+                font-weight: bold;
+            }
+            input {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+                box-sizing: border-box;
+            }
+            button {
+                margin-top: 15px;
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+
+    body
+        h1 Add a New User
+
+        form(action="/add" method="POST")
+            label(for="name") Name:
+            input(type="text" id="name" name="name" required)
+
+            label(for="surname") Surname:
+            input(type="text" id="surname" name="surname" required)
+
+            label(for="email") Email:
+            input(type="email" id="email" name="email" required)
+
+            button(type="submit") Add User
